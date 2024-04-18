@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Match de Culture Générale</h1>
+    <div class="team-names">
+      <input type="text" id="team1-input" placeholder="Nom de l'équipe 1">
+      <input type="text" id="team2-input" placeholder="Nom de l'équipe 2">
+      <button onclick="updateTeamNames()">OKAY</button>
+    </div>
+    <div class="scoreboard">
+      <div class="team">
+        <h1 id="team1-name">Équipe 1</h1>
+        <div class="score" id="team1-score">0</div>
+        <div class="options">
+          <button onclick="addScore('team1', 20)">+20</button>
+          <button onclick="addScore('team1', 10)">+10</button>
+          <button onclick="addScore('team1', 30)">+30</button>
+          <button onclick="addScore('team1', -10)">-10</button>
+        </div>
+      </div>
+      <div class="team">
+        <h1 id="team2-name">Équipe 2</h1>
+        <div class="score" id="team2-score">0</div>
+        <div class="options">
+          <button onclick="addScore('team2', 20)">+20</button>
+          <button onclick="addScore('team2', 10)">+10</button>
+          <button onclick="addScore('team2', 30)">+30</button>
+          <button onclick="addScore('team2', -10)">-10</button>
+        </div>
+      </div>
+    </div>
+    <div class="timer">
+      <div class="team">
+        <h2>Timer</h2>
+        <button onclick="startTimer(60)">Start 1 min</button>
+        <button onclick="startTimer(30)">Start 30 sec</button>
+        <button onclick="startTimer(5)">Start 5 sec</button>
+        <div id="countdown"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
